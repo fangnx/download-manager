@@ -14,30 +14,8 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/polyfill": "7.2.5",
     "@babel/register": "^7.0.0",
-    "babel-eslint": "^10.0.1",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
-  },
-  "eslintConfig": {
-    "env": {
-      "es6": true,
-      "node": true,
-      "browser": true
-    },
-    "globals": {
-      "chrome": true
-    },
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaVersion": 8
-    },
-    "rules": {
-      "eol-last": 0,
-      "quotes": [
-        2,
-        "single"
-      ]
-    }
   }
 }

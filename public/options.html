@@ -3,21 +3,21 @@
   <head> </head>
   <body>
     <div className="options-container">
-      <ul className="rules">
+      <ul id="rules">
         <li>
-          <input type="text" value="Rule Name" />
-          <input type="text" value="URL Fragment" />
-          <select name="url-match-mode">
-            <option value="Contains" selected>Contains</option>
-            <option value="Exact">Exact</option>
+          <input id="rule-name" type="text" />
+          <input id="match-url" type="text" />
+          <select id="match-url-mode">
+            <option value="contains" selected>Contains</option>
+            <option value="exact">Exact</option>
           </select>
-          <input type="text" value="Prefix" />
-          <input type="text" value="Suffix" />
-          <button>Add Rule</button>
+          <input id="prefix" type="text" />
+          <input id="suffix" type="text" />
+          <button id="add-rule-button">Add Rule</button>
         </li>
       </ul>
     </div>
 
-    <script src="options.js"></script>
+    <script type="text/javascript" src="options.js"></script>
   </body>
 </html>
