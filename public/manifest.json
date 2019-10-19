@@ -1,8 +1,8 @@
 {
-  "name": "Download Path Manager",
+  "name": "Download Modifier",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "",
+  "description": "Modify file names & save locations with rules",
   "icons": {
     "16": "images/icon-16.png",
     "128": "images/icon-128.png"

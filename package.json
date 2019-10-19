@@ -1,5 +1,5 @@
 {
-  "name": "download-path-manager",
+  "name": "chrome-extension-download-modifier",
   "version": "0.1.0",
   "private": true,
   "engines": {
