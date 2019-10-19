@@ -3,19 +3,18 @@
   <head> </head>
   <body>
     <div className="options-container">
-      <ul id="rules">
-        <li>
-          <input id="rule-name" type="text" />
-          <input id="match-url" type="text" />
-          <select id="match-url-mode">
-            <option value="contains" selected>Contains</option>
-            <option value="exact">Exact</option>
-          </select>
-          <input id="prefix" type="text" />
-          <input id="suffix" type="text" />
-          <button id="add-rule-button">Add Rule</button>
-        </li>
-      </ul>
+      <ul id="rules"></ul>
+      <li id="new-rule">
+        <input id="rule-name" type="text" />
+        <input id="match-url" type="text" />
+        <select id="match-url-mode">
+          <option value="contains" selected>Contains</option>
+          <option value="exact">Exact</option>
+        </select>
+        <input id="prefix" type="text" />
+        <input id="suffix" type="text" />
+        <button id="add-rule-button">Add Rule</button>
+      </li>
     </div>
 
     <script type="text/javascript" src="options.js"></script>

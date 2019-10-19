@@ -1,18 +1,27 @@
+const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
   entry: {
-    background: './src/background.js',
-    options: './src/options.js',
-    popup: './src/popup.js'
+    background: './src/background.ts',
+    options: './src/options.ts',
+    popup: './src/popup.ts'
   },
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
   },
-  externals: {
-    ramda: 'R'
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      }
+    ]
   },
-  module: {},
-  devtool: 'source-map'
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js']
+  },
+  plugins: [new CopyPlugin([{ from: 'public', to: '.' }])]
 };

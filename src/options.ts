@@ -1,10 +1,10 @@
 /**
- * options.js
+ * options.ts
  *
  * @author nxxinf
  * @github https://github.com/fangnx
  * @created 2019-10-18 23:26:37
- * @last-modified 2019-10-19 17:13:08
+ * @last-modified 2019-10-19 17:54:02
  */
 
 const ruleFields = ['ruleName', 'matchURL', 'matchURLMode', 'prefix', 'suffix'];
