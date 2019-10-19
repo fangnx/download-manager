@@ -1,8 +1,8 @@
 {
-  "name": "__MSG_appName__",
+  "name": "Download Path Manager",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "__MSG_appDescription__",
+  "description": "",
   "icons": {
     "16": "images/icon-16.png",
     "128": "images/icon-128.png"
@@ -15,13 +15,9 @@
     }
   },
 
-  "default_locale": "en",
   "background": {
-    "scripts": [
-      "libs/polyfill.min.js",
-      "scripts/chromereload.js",
-      "scripts/background.js"
-    ]
+    "scripts": ["background.js"]
   },
-  "permissions": ["bookmarks", "downloads"]
+  "options_page": "options.html",
+  "permissions": ["downloads", "storage"]
 }

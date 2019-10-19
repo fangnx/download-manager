@@ -1,11 +1,4 @@
-/**
- * background.js
- *
- * @author nxxinf
- * @github https://github.com/fangnx
- * @created 2019-10-08 12:02:57
- * @last-modified 2019-10-10 00:03:00
- */
+import config from './config.json';
 
 chrome.runtime.onInstalled.addListener(function(details) {});
 
@@ -35,10 +28,9 @@ const ruleMatched = (url, filename) => {
 
 chrome.downloads.onDeterminingFilename.addListener((downloadItem, suggest) => {
   const matched = ruleMatched(downloadItem.url, downloadItem.filename);
-  alert(matched);
   if (!!matched) {
     alert('Rule matched!');
     const newFilename = `${matched.prefix}${downloadItem.filename}`;
-    suggest({ filename: newFilename, conflictAction: 'uniquify' });
+    suggest({ filename: newFilename, conflictAction: config.conflictAction });
   }
 });
