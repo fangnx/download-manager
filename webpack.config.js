@@ -23,5 +23,5 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
   },
-  plugins: [new CopyPlugin([{ from: 'public', to: '.' }])]
+  plugins: [new CopyPlugin([{ from: './public', to: '.' }])]
 };

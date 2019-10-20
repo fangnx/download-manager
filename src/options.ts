@@ -4,7 +4,7 @@
  * @author nxxinf
  * @github https://github.com/fangnx
  * @created 2019-10-18 23:26:37
- * @last-modified 2019-10-19 17:54:02
+ * @last-modified 2019-10-19 22:59:16
  */
 
 const ruleFields = ['ruleName', 'matchURL', 'matchURLMode', 'prefix', 'suffix'];
@@ -20,14 +20,16 @@ chrome.storage.sync.get('rules', res => {
 const addRuleButton = document.getElementById('add-rule-button');
 
 addRuleButton.addEventListener('click', () => {
-  const urlMatchModeSelection = document.getElementById('match-url-mode');
+  const urlMatchModeSelection = document.getElementById(
+    'match-url-mode'
+  ) as HTMLSelectElement;
   const newRule = {
-    ruleName: document.getElementById('rule-name').value,
-    matchURL: document.getElementById('match-url').value,
+    ruleName: (document.getElementById('rule-name') as HTMLInputElement).value,
+    matchURL: (document.getElementById('match-url') as HTMLInputElement).value,
     matchURLMode:
       urlMatchModeSelection.options[urlMatchModeSelection.selectedIndex].value,
-    prefix: document.getElementById('prefix').value,
-    suffix: document.getElementById('suffix').value
+    prefix: (document.getElementById('prefix') as HTMLInputElement).value,
+    suffix: (document.getElementById('suffix') as HTMLInputElement).value
   };
   chrome.storage.sync.get('rules', res => {
     res.rules.push(newRule);

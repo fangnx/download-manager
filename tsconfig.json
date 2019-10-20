@@ -5,9 +5,10 @@
     "noImplicitAny": false,
     "sourceMap": false,
     "allowJs": true,
-    "rootDir": "src",
-    "outDir": "dist/js",
+    "rootDir": "./src",
+    "outDir": "./dist",
     "noEmitOnError": true,
     "typeRoots": ["node_modules/@types"]
-  }
+  },
+  "exclude": ["dist/", "webpack.config.js"]
 }
